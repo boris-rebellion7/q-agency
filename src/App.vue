@@ -1,32 +1,44 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+  <div 
+  id="app"
+  class="page h-100">
+    <navigation />
+
     <router-view/>
   </div>
 </template>
 
+<script>
+import { mapActions } from 'vuex'
+import Navigation from '@/components/Navigation'
+
+export default {
+  components: {
+    Navigation
+  },
+
+  data: () => ({
+    url: "https://jsonplaceholder.typicode.com/posts"
+  }),
+
+  async mounted() {
+    await this.axios.get(this.url).then((response) => {
+      this.setState({posts: response.data})
+    })
+  },
+
+  methods: {
+    ...mapActions([
+        'setState'
+    ]),
+  },
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
-}
+@import "@/assets/css/utility.scss";
+@import "@/assets/css/global.scss";
+@import'~bootstrap/dist/css/bootstrap.css'
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

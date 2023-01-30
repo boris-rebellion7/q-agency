@@ -1,0 +1,17 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a !important;
+  color: rgb(255 255 255 / 87%) !important;
+  height: 100vh;
+}
+
+a {
+	color: currentColor!important;
+	text-decoration: none!important;
+
+	&:hover {
+		text-decoration: none!important;
+	}
+}

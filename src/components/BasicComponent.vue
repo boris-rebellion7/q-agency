@@ -1,0 +1,47 @@
+<template>
+  <div class="basic-comp">
+    <h1 v-html="title" />
+  </div>
+</template>
+
+<script>
+import { mapState, mapActions } from 'vuex'
+
+export default {
+  name: "basic-comp",
+
+  components: {},
+
+  data: () => ({}),
+
+  props: {
+    title: {
+      type: String
+    },
+  },
+
+  mixins: [
+  ],
+
+  watch: {},
+
+  mounted() {},
+
+  methods: {
+      ...mapActions('app', [
+          'setStateApp'
+      ]),
+  },
+
+  computed: {
+    ...mapState('app', [
+      'width'
+    ])
+  }
+};
+</script>
+
+<style lang="scss" scoped="">
+.basic-comp {
+}
+</style>
