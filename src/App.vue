@@ -39,6 +39,6 @@ export default {
 
 @import "@/assets/css/utility.scss";
 @import "@/assets/css/global.scss";
-@import'~bootstrap/dist/css/bootstrap.css'
+@import'~bootstrap/dist/css/bootstrap.css';
 
 </style>

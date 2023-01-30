@@ -1,5 +1,5 @@
 <template>
-  <div class="post-inner py-5 d-flex flex-column flex-center h-100 text-center">
+  <div class="post-inner py-5 d-flex flex-column flex-center h-100 text-center px-4">
     <h1 
     class="display-4 text-uppercase mb-4" 
     v-if="activePost[0]"

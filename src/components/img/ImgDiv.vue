@@ -28,11 +28,12 @@ export default {
         type: String
     },
     alt: {
-        type: String
+      type: String,
+      default: 'Postmaster'
     },
     contain: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     proportion: {
       type: Number,

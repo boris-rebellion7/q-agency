@@ -2,7 +2,9 @@
   <router-link 
   :to="link"
   class='small-link'>
-    <span v-html="title" />
+    <div class="clamp-text-md d-flex flex-center">
+      <span v-html="title" />
+    </div>
   </router-link>
 </template>
 
@@ -27,6 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped="">
+
 .small-link {
   padding: 4rem;
   border: 1px solid white;

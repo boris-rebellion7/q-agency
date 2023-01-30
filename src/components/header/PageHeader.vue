@@ -7,7 +7,7 @@
     :proportion=".66"
     :static="true"
     :absolute='true'
-    alt="Q-agency" />
+    alt="Awsome posts" />
 
     <div class="position-relative on-top w-100">
       <div class="mb-5">
