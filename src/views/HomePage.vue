@@ -2,7 +2,7 @@
   <div class="home-page">
     <page-header 
     headline="Welcome"
-    subheadline="This is my awsome site" />
+    subheadline="Your plase for awsome posts" />
   </div>
 </template>
 

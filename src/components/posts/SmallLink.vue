@@ -1,8 +1,10 @@
 <template>
   <router-link 
+  @mouseenter.native='MouseObservable.hovered = true'
+  @mouseleave.native='MouseObservable.hovered = false'
   :to="link"
   class='small-link'>
-    <div class="clamp-text-md d-flex flex-center">
+    <div class="d-flex flex-center">
       <span v-html="title" />
     </div>
   </router-link>
@@ -12,10 +14,6 @@
 
 export default {
   name: "small-link",
-
-  components: {},
-
-  data: () => ({}),
 
   props: {
     link: {
@@ -31,9 +29,13 @@ export default {
 <style lang="scss" scoped="">
 
 .small-link {
-  padding: 4rem;
+  padding: 2rem;
   border: 1px solid white;
   transition: background-color .4s;
+
+  @media screen  and (min-width: 768px) {
+    padding: 4rem;
+  }
 
   @media (pointer:fine){
     &:hover {

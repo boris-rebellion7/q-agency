@@ -1,12 +1,14 @@
 <template>
   <div class="post-page text-center py-5">
     <h1 
-    class="mb-5" 
+    class="mb-5 mt-5 mt-md-0" 
     v-text="'Welcome to all of our posts'" />
 
     <!-- FILTERS -->
-    <div class="mb-3 mb-md-5">
+    <div class="mb-5">
       <input 
+      @mouseenter='MouseObservable.hovered = true'
+      @mouseleave='MouseObservable.hovered = false'
       type="text"
       placeholder="Search" 
       v-model="search">
@@ -15,7 +17,7 @@
 
     <div class="row m-0">
       <small-link
-      class="col-6"
+      class="col-md-6"
       v-for="post in filteredPosts(posts, 'title')"
       :key="post.id"
       :link="`post/${post.id}`"
@@ -37,12 +39,6 @@ export default {
   data: () => ({
     search: ''
   }),
-
-  watch: {
-    filteredItems(f) {
-      console.log("logara", f);
-    }
-  },
 
   components: {
     SmallLink

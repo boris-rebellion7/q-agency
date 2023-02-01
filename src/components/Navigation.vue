@@ -2,7 +2,10 @@
   <div class="navigation row justify-content-between p-3">
     <!-- LOGO -->
     <div class="col d-flex">
-      <router-link :to="'/'">
+      <router-link 
+      @mouseenter.native='MouseObservable.hovered = true'
+      @mouseleave.native='MouseObservable.hovered = false'
+      :to="'/'">
         <h3>POSTMASTER</h3>
       </router-link>
     </div>
@@ -10,19 +13,25 @@
 
     <!-- LINKS -->
     <div class="col d-flex justify-content-end">
-      <router-link 
+
+      <link-line-component
       class="h4"
-      to="/posts"
-      v-text="'Posts'" />
+      :text="'Posts'"
+      :url="'/posts'" />
     </div>
     <!-- END :: LINKS -->
   </div>
 </template>
 
 <script>
+import LinkLineComponent from '@/components/linkLineComponent/LinkLineComponent'
 
 export default {
   name: "vue-navigation",
+
+  components: {
+    LinkLineComponent
+  }
 };
 </script>
 
