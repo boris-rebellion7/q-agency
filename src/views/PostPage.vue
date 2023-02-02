@@ -17,7 +17,7 @@
 
     <div class="row m-0">
       <small-link
-      class="col-md-6"
+      class="link-wrapper col-md-6"
       v-for="post in filteredPosts(posts, 'title')"
       :key="post.id"
       :link="`post/${post.id}`"

@@ -46,3 +46,6 @@ Options to pass:
 
 ### 4. Fancy Cursor
 It is a bit of flare i added and can be used by adding MouseObservable.js located in the observable folder, apart from that you will need to import MouseObservable in the app.vue file and adde it to the Vue.prototype, second thing is to add the "@mousemove='onMouseMove'" to the parent element. After that add the onMouseMove method that add's the necessary variables for the cursor to be able to follow the cursor. To use the hover option add some mouseenter or leave to a element and just change the reactive variable hovered which is located in the MouseObservable.js.
+
+## Side note
+I added 2 small unit tests on the PostPage.vue and PageHeader.vue. I have newer used unit testing before and it took me about 3h to figure out how it works from the https://v1.test-utils.vuejs.org.

@@ -23,7 +23,7 @@
       <!-- 4 RANDOM POSTS -->
       <div class="row m-0">
         <small-link
-        class="col-6"
+        class="col-6 link-wrapper"
         v-for="post in randomPosts"
         :key="post.id"
         :link="`post/${post.id}`"
